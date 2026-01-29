@@ -4,7 +4,7 @@ const roles = [
   "Backend Developer",
   "Python Developer",
   "Data Analyst",
-  "SQL Specialist",
+  "",
 ];
 
 function TypingEffect() {

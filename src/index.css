@@ -417,20 +417,65 @@ body::after {
 /* ========================
    SKILLS
 ======================== */
-
 .chip-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 14px;
+}
+
+.skill-card {
+  position: relative;
 }
 
 .chip {
-  padding: 8px 14px;
+  padding: 10px 18px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   background: radial-gradient(circle at top, #020617, #020617);
   color: #e5e7eb;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.35);
+}
+
+/* Tooltip box */
+.skill-tooltip {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #020617;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px 14px;
+  width: 220px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 20;
+}
+
+.skill-card:hover .skill-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(6px);
+  pointer-events: auto;
+}
+
+.skill-tooltip ul {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.skill-tooltip li {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
 }
 
 /* ========================
