@@ -1,31 +1,13 @@
-import { useState,useEffect } from 'react'
+import { useEffect } from 'react'
 import Navbar from './components/Navbar.jsx'
-import Hero from './components/Hero.jsx';
-import Skills from './components/Skills.jsx';
-import Experience from './components/Experience.jsx';
-import Projects from './components/Projects.jsx';
-import Education from './components/Education.jsx';
-import Contact from './components/Contact.jsx';
+import Hero from './components/Hero.jsx'
+import Skills from './components/Skills.jsx'
+import Experience from './components/Experience.jsx'
+import Projects from './components/Projects.jsx'
+import Education from './components/Education.jsx'
+import Contact from './components/Contact.jsx'
 
 function App() {
-    const [theme, setTheme] = useState("dark");
-
-  // load theme from localStorage
-  useEffect(() => {
-    const saved = localStorage.getItem("theme") || "light";
-    setTheme(saved);
-    document.documentElement.setAttribute("data-theme", saved);
-  }, []);
-
-  // save theme on change
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
-  };
 
   // scroll reveal animations
   useEffect(() => {
@@ -49,19 +31,14 @@ function App() {
 
   return (
     <>
-    <Navbar theme={theme} onToggleTheme={toggleTheme} />
-     <main>
+      <Navbar />
+      <main>
         <Hero />
         <Skills />
         <Experience />
         <Projects />
         <Education />
         <Contact />
-        {/* 
-        
-        
-        
-         */}
       </main>
     </>
   )

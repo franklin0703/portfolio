@@ -9,8 +9,12 @@ function Hero() {
           Hi, I'm <span>Stenis Franklin A</span>
         </h1>
         <p className="hero-sub">
-          I build reliable, scalable backend systems and data-driven solutions
-          using Python, SQL and modern web technologies.
+          Frontend Developer with hands-on experience in building responsive 
+          and user-friendly web applications using React, JavaScript, HTML, and CSS. 
+          Strong foundation in Python, SQL, and data visualization using Power BI. 
+          Passionate about clean UI design, modern animations, and writing maintainable code. 
+          Actively seeking opportunities to apply my technical skills in real-world projects 
+          and grow as a software developer.
         </p>
         <p className="hero-sub">
           I'm a <TypingEffect />
